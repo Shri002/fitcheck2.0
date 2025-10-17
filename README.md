@@ -1,7 +1,3 @@
-Here’s your content beautifully formatted and structured for a **README.md**, following professional open-source documentation standards and clean Markdown styling:
-
----
-
 # 💠 FITCHECK: Psoriasis Tracking Tool for Women
 
 ## 🩺 Overview
@@ -85,11 +81,10 @@ If you're interested in contributing:
 
 1. Check out our [Contribution Guidelines](CONTRIBUTING.md)
 2. Open an issue or pull request
+3. After pulling, cd to the fitcheck2.0 folder and npm start to see full website
 
 This project is **open-source** and committed to improving health outcomes through technology.
 
 Join us in making a meaningful impact! 🌿
 
----
-
-Would you like me to add a short **“Tech Stack”** and **“Getting Started”** section (for example, React + MongoDB + OpenAI API) to make it README-complete for a GitHub project?
+ 
