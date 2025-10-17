@@ -1,0 +1,388 @@
+/* ================================
+   src/pages/styles/Survey.css
+   ================================ */
+
+/* ================================
+   Base Layout
+   ================================ */
+.survey-page {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 70px;
+  padding-bottom: 2rem;
+}
+
+/* Main Content Area */
+.survey-main-content {
+  padding: 2.5rem 4rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-right: 260px; /* Account for right section navbar + spacing */
+}
+
+/* Headers */
+.survey-header {
+  margin-bottom: 3rem;
+}
+
+.survey-date-title {
+  color: #6B7280;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.survey-section-title {
+  color: #1F2937;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Section Container */
+.survey-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Content */
+.section-content {
+  margin-top: 1rem;
+}
+
+.section-description {
+  color: #6B7280;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Navigation Buttons */
+.section-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.btn-primary {
+  background: #30A0CD;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: auto;
+}
+
+.btn-primary:hover {
+  background: #2689b5;
+}
+
+.btn-secondary {
+  background: white;
+  color: #30A0CD;
+  border: 2px solid #30A0CD;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #f0f9ff;
+}
+
+.btn-skip {
+  background: transparent;
+  color: #6B7280;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-skip:hover {
+  background: #F3F4F6;
+}
+
+/* Stress Section */
+.stress-selector {
+  margin: 2rem 0;
+}
+
+.stress-level-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stress-level-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stress-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.stress-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.stress-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.stress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #30A0CD;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stress-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #30A0CD;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+
+/* Lesions Section */
+.severity-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.severity-card {
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.severity-card:hover {
+  border-color: #30A0CD;
+  box-shadow: 0 2px 8px rgba(48, 160, 205, 0.1);
+}
+
+.severity-card.selected {
+  border-color: #30A0CD;
+  background: #f0f9ff;
+}
+
+.severity-level {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #30A0CD;
+  margin-bottom: 0.5rem;
+}
+
+.severity-label {
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 0.25rem;
+}
+
+.severity-description {
+  font-size: 0.85rem;
+  color: #6B7280;
+}
+
+.location-section {
+  margin: 2rem 0;
+}
+
+.location-section h3 {
+  color: #1F2937;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.location-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.location-chip {
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.location-chip:hover {
+  border-color: #30A0CD;
+}
+
+.location-chip.selected {
+  background: #30A0CD;
+  color: white;
+  border-color: #30A0CD;
+}
+
+/* Notes Section */
+.notes-section {
+  margin: 2rem 0;
+}
+
+.notes-section label {
+  display: block;
+  color: #1F2937;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.notes-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.notes-section textarea:focus {
+  outline: none;
+  border-color: #30A0CD;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .survey-page {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 70px;
+    padding-bottom: 250px; /* Account for bottom sheet */
+  }
+
+  .survey-main-content {
+    padding: 1.5rem 1rem;
+    margin-right: 0;
+  }
+
+  .survey-section-title {
+    font-size: 1.5rem;
+  }
+
+  .survey-section {
+    padding: 1.5rem;
+  }
+
+  .severity-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-navigation {
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    order: -1;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .survey-page {
+    padding-left: 80px; /* Smaller left navbar on tablet */
+  }
+
+  .survey-main-content {
+    padding: 2rem 1.5rem;
+    margin-right: 280px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1536px) {
+  .survey-main-content {
+    padding: 2rem 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1537px) {
+  .survey-main-content {
+    padding: 2.5rem 4rem;
+  }
+}

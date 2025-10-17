@@ -1,0 +1,364 @@
+/* src/components/survey/LesionsSection.css */
+
+.lesions-section {
+  width: 100%;
+}
+
+/* Subtitle */
+.lesions-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+   INTRO SECTION
+   ================================ */
+.lesions-intro {
+  width: 100%;
+}
+
+.pasi-explanation {
+  background: #F9FAFB;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.pasi-explanation p {
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.pasi-explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.pasi-explanation strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.body-part-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.body-part-card:hover {
+  border-color: #30A0CD;
+  box-shadow: 0 2px 8px rgba(48, 160, 205, 0.1);
+}
+
+.body-icon {
+  width: 80px;
+  height: 120px;
+}
+
+.body-part-label {
+  font-weight: 500;
+  color: #1F2937;
+  margin: 0;
+}
+
+/* ================================
+   PASI INPUT SECTION
+   ================================ */
+.pasi-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pasi-field {
+  margin-bottom: 1.5rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Radio Group for Area */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.radio-option:hover {
+  border-color: #30A0CD;
+  background: #F0F9FF;
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"]:checked + span {
+  color: #30A0CD;
+  font-weight: 600;
+}
+
+.radio-option span {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Button Group for Severity */
+.button-group {
+  display: flex;
+  gap: 0;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.severity-btn {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border: none;
+  border-right: 1px solid #E5E7EB;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.severity-btn:last-child {
+  border-right: none;
+}
+
+.severity-btn:hover {
+  background: #F9FAFB;
+}
+
+.severity-btn.active {
+  background: #30A0CD;
+  color: white;
+  font-weight: 600;
+}
+
+/* Image Upload */
+.image-upload-area {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.image-preview {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F9FAFB;
+}
+
+.upload-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.upload-btn:hover {
+  transform: scale(1.1);
+}
+
+.upload-count {
+  color: #30A0CD;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Body Visualization */
+.body-visual {
+  position: fixed;
+  right: 320px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* ================================
+   RATING SECTIONS (Itchiness & Pain)
+   ================================ */
+.rating-section {
+  width: 100%;
+}
+
+.slider-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.rating-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #30A0CD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(48, 160, 205, 0.3);
+}
+
+.rating-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.rating-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0;
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.custom-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #E5E7EB 0%, #30A0CD 100%);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #30A0CD;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #30A0CD;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+/* Mobile */
+@media (max-width: 768px) {
+  .body-parts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .body-visual {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .severity-btn {
+    border-right: none;
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  .severity-btn:last-child {
+    border-bottom: none;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .radio-option {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .body-visual {
+    right: 280px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1537px) {
+  .body-visual {
+    right: 360px;
+  }
+}

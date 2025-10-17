@@ -1,0 +1,484 @@
+/* navbar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   BASE NAVBAR STYLES
+   ======================================== */
+#navbar {
+  width: 200px;
+  height: 100vh;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Logo and Title Header */
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar-header svg {
+  flex-shrink: 0;
+}
+
+.navbar-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #204173;
+  margin: 0;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 1rem 0.75rem;
+  margin: 0 0 1rem 0;
+}
+
+#navbar li {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+#navbar li p {
+  font-size: 0.75rem;
+  color: #64748b;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+#navbar a,
+#navbar a:visited {
+  text-decoration: none;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+#navbar a:hover {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  transform: translateX(4px);
+}
+
+#navbar a.active {
+  background-color: #dbeafe;
+  color: #0284c7;
+  font-weight: 500;
+}
+
+/* Icon styles */
+#navbar a svg {
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+#navbar a:hover svg {
+  transform: scale(1.1);
+}
+
+/* Scrollbar styling */
+#navbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+#navbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#navbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+#navbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========================================
+   HAMBURGER MENU BUTTON
+   ======================================== */
+
+/* Mobile Header - Only visible on mobile */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: transparent;
+  z-index: 1100;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #204173;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1101;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 0.2rem;
+  background: #204173;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hide hamburger when menu is open */
+.hamburger.open {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Desktop only elements */
+.desktop-only {
+  display: flex;
+}
+
+/* Overlay for mobile */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 999;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Extra Small (XS): 0 - 480px - Phones (portrait) */
+@media (max-width: 480px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .nav-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  #navbar {
+    transform: translateX(100%);
+    width: 70%;
+    max-width: 240px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    left: auto;
+    right: 0;
+    padding-top: 1rem;
+    justify-content: flex-start;
+  }
+
+  #navbar.open {
+    transform: translateX(0);
+  }
+
+  #navbar.open ~ .nav-overlay,
+  .nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-header {
+    padding: 1rem;
+  }
+
+  #navbar ul {
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+  }
+
+  #navbar ul:first-of-type {
+    margin-top: 0;
+  }
+
+  #navbar a {
+    font-size: 0.875rem;
+    padding: 0.7rem 1rem;
+  }
+
+  #navbar li p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Small (SM): 481 - 768px - Phones (landscape), small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .nav-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  #navbar {
+    transform: translateX(100%);
+    width: 280px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    left: auto;
+    right: 0;
+    padding-top: 1rem;
+    justify-content: flex-start;
+  }
+
+  #navbar.open {
+    transform: translateX(0);
+  }
+
+  #navbar.open ~ .nav-overlay,
+  .nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-header {
+    padding: 1rem;
+  }
+
+  #navbar ul {
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+  }
+
+  #navbar ul:first-of-type {
+    margin-top: 0;
+  }
+
+  #navbar a {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  #navbar li p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Medium (MD): 769 - 1024px - Tablets, small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #navbar {
+    width: 180px;
+  }
+
+  #navbar ul {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-header {
+    padding: 1.25rem 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .navbar-header svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .navbar-title {
+    font-size: 1rem;
+  }
+
+  #navbar a {
+    font-size: 0.85rem;
+    padding: 0.65rem 0.875rem;
+    gap: 0.6rem;
+  }
+
+  #navbar li p {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Large (LG): 1025 - 1280px - Desktops, standard laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #navbar {
+    width: 200px;
+  }
+
+  #navbar ul {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .navbar-title {
+    font-size: 1.1rem;
+  }
+
+  #navbar a {
+    font-size: 0.9rem;
+  }
+
+  #navbar li p {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Extra Large (XL): 1281 - 1536px and above */
+@media (min-width: 1281px) {
+  #navbar {
+    width: 220px;
+  }
+
+  #navbar ul {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-header {
+    padding: 1.75rem 1.25rem;
+    gap: 0.875rem;
+  }
+
+  .navbar-header svg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+
+  #navbar a {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.125rem;
+    gap: 0.875rem;
+  }
+
+  #navbar a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  #navbar li p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Ultra Large: 1537px and above */
+@media (min-width: 1537px) {
+  #navbar {
+    width: 240px;
+  }
+
+  #navbar ul {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-header {
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .navbar-header svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar-title {
+    font-size: 1.3rem;
+  }
+
+  #navbar a {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  #navbar a svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  #navbar li p {
+    font-size: 0.85rem;
+    margin: 0.75rem 0;
+  }
+}

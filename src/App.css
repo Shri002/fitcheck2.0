@@ -1,0 +1,154 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #334155;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 200px; /* Account for fixed navbar width */
+  padding: 0;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.page-container h1 {
+  font-size: 1.75rem !important;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.page-container p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Extra Small (XS): 0 - 480px - Phones (portrait) */
+@media (max-width: 480px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 70px; /* Account for fixed mobile header height */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 1rem;
+  }
+  
+  .page-container h1 {
+    font-size: 1.25rem !important;
+  }
+  
+  .page-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Small (SM): 481 - 768px - Phones (landscape), small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 70px; /* Account for fixed mobile header height */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 1.5rem;
+  }
+  
+  .page-container h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Medium (MD): 769 - 1024px - Tablets, small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    margin-left: 180px; /* Match navbar width */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 1.75rem;
+  }
+  
+  .page-container h1 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Large (LG): 1025 - 1280px - Desktops, standard laptops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-content {
+    margin-left: 200px; /* Match navbar width */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 2rem;
+  }
+}
+
+/* Extra Large (XL): 1281 - 1536px */
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .main-content {
+    margin-left: 220px; /* Match navbar width */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 2rem;
+  }
+  
+  .page-container h1 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Ultra Large: 1537px and above */
+@media (min-width: 1537px) {
+  .main-content {
+    margin-left: 240px; /* Match navbar width */
+    padding: 0;
+  }
+  
+  .page-container {
+    padding: 2.5rem;
+  }
+  
+  .page-container h1 {
+    font-size: 2rem !important;
+  }
+  
+  .page-container p {
+    font-size: 1.15rem;
+  }
+}
